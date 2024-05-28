@@ -1,0 +1,78 @@
+*{
+    text-decoration: none !important;
+}
+
+
+.dior-upper {
+    background: url('/public/images/dior/background.webp') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 35vh;
+}
+
+.dior-upper a{
+    background-color:#000 ;
+    padding: 8px 18px;
+    color: aliceblue;
+}
+
+
+.dior-upper h2 {
+    position:absolute; 
+    top: 10%;
+    right: 35%;
+    
+}
+
+.dior-upper a{
+    position: absolute;
+    top: 32%;
+    left: 31%;
+}
+
+/* MEDIA SORGULARI */
+
+@media(min-width:768px){
+
+    .dior-upper h2 {
+        position:absolute; 
+        top: 10%;
+        right: 41%;
+        
+    }
+    
+    .dior-upper a{
+        position: absolute;
+        top: 32%;
+        left: 43%;
+    }
+
+
+}
+
+
+@media(min-width:1080px){
+    .dior-upper {
+        background: url('/public/images/dior/background.webp') no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 70vh;
+    
+    }
+
+    .dior-upper h2 {
+        position:absolute; 
+        top: 10%;
+        right: 45%;
+        
+    }
+    
+    .dior-upper a{
+        position: absolute;
+        top: 25%;
+        left: 45%;
+    }
+    
+
+    
+}

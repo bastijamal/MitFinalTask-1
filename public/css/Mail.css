@@ -1,0 +1,19 @@
+.form{
+    background-color: rgb(225, 225, 225);
+    margin-top: 250px;
+    text-align: center;
+    width: 790px;    
+    padding: 60px;
+}
+    
+.label-text {
+    font-size: 25px; 
+    font-family: "Playfair Display", serif;
+}
+
+
+@media(min-width:768px){
+    .input{
+        width: 375px;
+    }
+}

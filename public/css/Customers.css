@@ -1,0 +1,55 @@
+/* Custom.css */
+
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+
+
+
+  
+  @media (max-width: 767px) {
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .card .row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .photo {
+      margin-bottom: 1rem;
+    }
+  
+    .photo img {
+      width: 75%;
+      max-width: 120px;
+    }
+
+    .clients{
+      padding-bottom: 200px ;
+    }
+  
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 1080px) {
+    .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .card-body {
+      padding: 1.25rem;
+    }
+
+  }
+  

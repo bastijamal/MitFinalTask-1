@@ -1,0 +1,13 @@
+.navosh {
+    background: url('/public/images/backrhode.png') no-repeat;
+    background-size: cover;
+    background-position: center; /* shekli yaridan kesdim */
+    position: relative;
+    height: 25vh;
+}
+
+.header {
+    min-height: 900px; 
+    /* shekli ashagdan ayirdi padding goydu */
+
+}

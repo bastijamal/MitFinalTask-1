@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.swiper {
+  width: 350px !important;
+  height: 550px !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #efefef;
+  border-radius: 0.3px;
+  border: 1px solid #f1f0ec;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+
+/* Cards */
+.umumi {
+  margin-top: 200px;
+  width: 80%;
+  height: 80%;
+}
+
+
+/* MEDIA SORGULARI  */
+
+@media(min-width:768px) {
+
+  .swiper {
+    width: 800px !important;
+    height: 600px !important;
+  }
+
+  .swiper-slide {
+    padding: 20px;
+  }
+
+}
+
+
+@media(min-width:1080px) {
+  
+  .swiper {
+    width: 2000px !important;
+    height: 600px !important;
+  }
+
+  /* Cards */
+  .umumi img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .umumi {
+    width: 1600px;
+    height: 600px;
+  }
+}

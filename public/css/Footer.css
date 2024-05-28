@@ -1,0 +1,78 @@
+*{
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer{
+    background-color: #131515;
+    color: #f0f8ff;
+    padding: 0px 50px;   
+    text-align: center;
+    /* margin-top: 100vh; */
+}
+
+.footer a{
+    color: aliceblue;
+}
+
+.footer h5{
+    color: rgb(211, 209, 206);
+    padding-top: 90px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    align-items: center;
+}
+
+.footer-right img{
+    width: 25px;
+}
+
+.footer-right-icons  {
+    display: flex;
+    gap: 20px;
+}
+
+
+.footer-bottom{
+    border-top: 1px solid #3c3c3c;
+    margin-top: 50px;
+    padding: 30px;
+
+}
+
+.footer-bottom .qaydalar-tehlukesizlik{
+    display:grid;
+    gap: 8px;
+   
+}
+
+
+@media(min-width:768px){
+    .footer{
+        padding: 0px 110px ;   
+   
+    }
+
+    .footer-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+       
+    }
+
+    .qaydalar-tehlukesizlik{
+        display: flex !important;
+        gap: 30px !important;
+    }
+}
