@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Cards = () => {
   return (
-    <div className="container main">
+    <div className="container main" id='paradise'>
       {/* Header */}
       <header className="py-5 text-center">
         <h1>Make Up Paradise</h1>

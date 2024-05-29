@@ -6,15 +6,20 @@ import React from 'react'
 const Header = () => {
     return (
         <div>
-            <div className=" header">
+            <div className=" header container">
 
-                <div className="header-top">
+                <div className="header-left">
+                    <img src="/public/images/charlot.png" alt="" width='600px'  />
 
-                    <h4 className='text-muted'>One of everything really good</h4>
-                    <p className='text-secondary'>At rhode, we create tried-and-true skincare with a little something new. Our formulas pair always beloved ingredients with newer ones for ultimate barrier nourishment. Each product has a unique, lush texture that feels dreamy on your skin and makes for a routine you always look forward to.</p>
                 </div>
 
-              
+                <div className="header-right ">
+
+                    <h4 className='text-muted'>One of everything really good</h4>
+                    <p className='text-secondary'>Charlotte Tilbury is currently the world’s fastest growing beauty brand. With 130+ awards to date, record-breaking Charlotte Tilbury has revolutionised the face of a global industry through de-codifying makeup magic for every woman at every age with an easy-to-use, easy-to-choose, easy-to-gift range with Charlotte’s ten signature looks reworked for Asia.</p>
+                </div>
+
+
             </div>
         </div>
 

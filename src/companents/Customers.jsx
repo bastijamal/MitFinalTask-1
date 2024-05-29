@@ -4,7 +4,7 @@ import React from 'react';
 
 const Customers = () => {
   return (
-    <div className="container p-5">
+    <div className="container p-5" id='clients'>
       <div className="row clients">
         <h1 className='text-muted text-center p-5'>Our Clients Reviews</h1>
 

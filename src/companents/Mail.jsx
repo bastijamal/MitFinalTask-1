@@ -6,15 +6,8 @@ import emailjs from '@emailjs/browser';
 
 
 
-// // third Party API integration
-
-
-
-
-// form icinde - 
-
 const Mail = () => {
-
+// // third Party API integration
     const myform =useRef();
 
     const sendEmail = (e) => {

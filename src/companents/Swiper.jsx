@@ -16,7 +16,7 @@ import { Navigation } from 'swiper/modules';
 
 function MySwiper() {
   return (
-    <Swiper className='umumi container'
+    <Swiper className='umumi container' id='products'
 
     
       spaceBetween={30}

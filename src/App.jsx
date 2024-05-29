@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Companentler buraya gelecek
 import Navbar from './companents/Navbar'
@@ -50,6 +50,7 @@ function App() {
             <Route path="/customers" element={<Customers />} />
             <Route path="/cards" element={<Cards />} />
             <Route path="/section" element={<Section />} />
+            <Route path="/swiper" element={<Swiper />} />
             <Route path="/footer" element={<Footer />} />
             <Route path="/mail" element={<Mail />} />
             <Route path="*" element={<NotFound />} />

@@ -1,47 +1,84 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import { IoMdClose } from "react-icons/io";
+import { Link } from 'react-router-dom';
 import '/public/css/Navbar.css';
 
-
 const Navbar = () => {
+  const [isShippingVisible, setIsShippingVisible] = useState(true); 
+  const blackMenu = useRef();
+
+  const handleShippingClose = () => {
+    setIsShippingVisible(false); 
+  };
+
+  const openMenu = () => {
+    blackMenu.current.classList.add("aktiv");
+  };
+
+  const closeMenu = () => {
+    blackMenu.current.classList.remove("aktiv");
+  };
+
+  const closeMenuOnClick = () => {
+    if (blackMenu.current.classList.contains("aktiv")) {
+      closeMenu();
+    }
+  };
+
   return (
-    <nav className="navbar navosh navbar-expand-lg navbar-light ">
-  <div className=" icon container">
-    <img src="/public/images/icon.png" alt="" width="130px" height="110px" to="#"/>
-    <a className="navbar-brand  text-secondary" href="#">GlamourShop</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
-        <li className="nav-item ">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+    <>
+      {isShippingVisible && ( 
+        <p className='text-center shipping'>
+          Free worldwide shipping for orders over $55. Shop now 
+          <button className='close' onClick={handleShippingClose}>X</button>
+        </p>
+      )}
 
-        <li className="nav-item">
-          <a className="nav-link" href="#">About Us</a>
-        </li>
+      <div className="mobile-menu position-fixed" ref={blackMenu}>
+        <IoMdClose className='close-icon' onClick={closeMenu} />
+        <nav className="mobile-links">
+          <Link to="/" className="nav-link fw-medium" onClick={closeMenuOnClick}>Home</Link>
+          <Link to="/customers" className="nav-link fw-medium" onClick={closeMenuOnClick}>Clients</Link>
+          <Link to="/swiper" className="nav-link fw-medium" onClick={closeMenuOnClick}>Products</Link>
+          <Link to="/cards" className="nav-link fw-medium" onClick={closeMenuOnClick}>Paradise</Link>
+          <Link to="/mail" className="nav-link fw-medium" onClick={closeMenuOnClick}>Contact</Link>
+        </nav>
+      </div>
 
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Sale</a></li>
-            <li><a className="dropdown-item" href="#">Best Sellers</a></li>
-            <li><hr className="dropdown-divider"></hr></li>
-            <li><a className="dropdown-item" href="#">Favourite</a></li>
-          </ul>
-        </li>
-      </ul>
-      {/* <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" />
-        <button className="btn btn-outline-success p-2" type="submit">Search</button>
-      </form> */}
-    </div>
-  </div>
-</nav>
 
-  )
+
+      <nav className="navbar navbar-expand-lg navbar-light container">
+        <div className="container-fluid">
+          <img src="/public/images/icon.png" alt="Icon" width='130px' height='150px'/>
+          <Link className="navbar-brand text-secondary ps-5" to="/">GlamourShop</Link>
+          <button className="navbar-toggler" type="button" aria-label="Toggle navigation" onClick={openMenu}>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/section">About us</Link>
+              </li>
+              <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><Link className="dropdown-item" to="/customers">Clients</Link></li>
+                  <li><Link className="dropdown-item" to="/swiper">Products</Link></li>
+                  <li><hr className="dropdown-divider"/></li>
+                  <li><Link className="dropdown-item" to="/cards">Paradise</Link></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
